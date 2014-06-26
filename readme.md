@@ -5,8 +5,14 @@ Use standard user interaction to detect human activity. Encode your action path 
 At this time, plugin is available with
 - jQuery 1.8+
 
-current encode available
+Current encode available
 - base64
+
+Compatible with
+- IE7+
+- Chrome
+- Firefox
+Most of common recent browsers
 
 ##Base 
 Edit your form element, empty action parameter, and set new parameter with your action path encoded
@@ -30,3 +36,11 @@ Simply include shadowCaptcha script, and call plugin before user submit
 		})
 	})
 	</script>
+
+###Parameters
+- action (default : "data-shdcapt") : attribute with encoded path
+
+##Todo
+- add javascript only plugin to be jquery free 
+- add encoding with key
+- add ajax code generation for server check after submit
