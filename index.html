@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>ShadowCaptcha</title>
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="/js/min/shadowCaptcha.min.js"></script>
+	<script>
+	jQuery(document).ready(function(){
+		jQuery('.submit').click(function(){
+			jQuery('form').shadowCaptcha();
+		})
+	})
+	</script>
+</head>
+<body>
+	<div class="container">
+		<form role="form" method="get" action="" data-shdcapt="L2Zvcm0vdGVzdC9kZW1vLnBocA==">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputFile">File input</label>
+				<input type="file" id="exampleInputFile">
+				<p class="help-block">Example block-level help text here.</p>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Check me out
+				</label>
+			</div>
+			<button type="submit" class="submit btn btn-default">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
