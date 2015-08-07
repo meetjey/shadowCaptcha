@@ -37,6 +37,10 @@ Simply include shadowCaptcha script, and call plugin before user submit
 
 ###Parameters
 - action (default : "data-shdcapt") : attribute with encoded path
+- rollingCodeSalt (default : false) : Salt used to generate input value sent with form
+- rollingCodeName (default : "sc-rolling-code") : name of field sent with form
+- honeyName (default : "sc-honey-code") : name of honeyPot field
+- rollingCodeCypher (default : function) : function used to generate uniq rolling code, by default return rollingCodeSalt
 
 ##Todo
 - add javascript only plugin to be jquery free
