@@ -15,5 +15,8 @@ var shadowCaptcha = {
     	this.getAction(a);
     	this.decode();
     	this.setAction(b);
-    }
+    },
+		getRollingCode:function(key,algo){
+			return algo(key);
+		}
 };

@@ -1,6 +1,6 @@
 #ShadowCaptcha the invisible captcha
 
-Use standard user interaction to detect human activity. Encode your action path to prevent robot to read and send spam to it.
+Use standard user interaction to detect human activity. Encode your action path to prevent robot to read and send spam to it. Use honeypot to trap robot, if an extra field is completed, form not submitted.
 
 At this time, plugin is available with
 - jQuery 1.8+
@@ -14,7 +14,7 @@ Compatible with
 - Firefox
 Most of common recent browsers
 
-##Base 
+##Base
 Edit your form element, empty action parameter, and set new parameter with your action path encoded
 
 In php
@@ -31,9 +31,7 @@ Simply include shadowCaptcha script, and call plugin before user submit
 	<script src="/js/min/shadowCaptcha.min.js"></script>
 	<script>
 	jQuery(document).ready(function(){
-		jQuery('.submit').click(function(){
-			jQuery('form').shadowCaptcha();
-		})
+		jQuery('form').shadowCaptcha({rollingCodeSalt:"JFHGInrjg!LIGGENjg"});
 	})
 	</script>
 
@@ -41,6 +39,6 @@ Simply include shadowCaptcha script, and call plugin before user submit
 - action (default : "data-shdcapt") : attribute with encoded path
 
 ##Todo
-- add javascript only plugin to be jquery free 
+- add javascript only plugin to be jquery free
 - add encoding with key
 - add ajax code generation for server check after submit

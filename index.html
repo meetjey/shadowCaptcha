@@ -7,9 +7,10 @@
 	<script src="/js/min/shadowCaptcha.min.js"></script>
 	<script>
 	jQuery(document).ready(function(){
+		jQuery('form').shadowCaptcha({rollingCodeSalt:"JFHGInrjg!LIGGENjg"});
 		jQuery('.submit').click(function(){
-			jQuery('form').shadowCaptcha();
-		})
+			jQuery(this).closest('form').submit();
+		});
 	})
 	</script>
 </head>
@@ -34,7 +35,7 @@
 					<input type="checkbox"> Check me out
 				</label>
 			</div>
-			<button type="submit" class="submit btn btn-default">Submit</button>
+			<button type="button" class="submit btn btn-default">Submit</button>
 		</form>
 	</div>
 </body>
